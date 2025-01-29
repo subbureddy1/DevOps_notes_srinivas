@@ -74,9 +74,23 @@ While declaring dependencies, the coordinates of the artifacts must be provided:
 - **Artifact ID**: Identifies the artifact within the context of the group.
 - **Version**: Specifies the release or build number of the project.
 
-```xml
-<dependency>
-  <groupId>com.example</groupId>
-  <artifactId>example-artifact</artifactId>
-  <version>1.0.0</version>
-</dependency>
+
+## maven installation:
+ 
+A system running windows
+A working internet connection
+Access to an account with administrator priviliges
+access to the command prompt
+A copy of java installed and ready to use, with the JAVA_HOME environment variable setup
+ 
+step1: download maven zip file and extract 
+step2: add maven_home system variable
+step3:add maven_home directory in path variable
+ 
+## Install java on windows
+prerequisites:
+system running windows
+internet connection
+administrator priviliges
+Step 1: Add Java to System Variables
+Step 2: Add JAVA_HOME Variable
