@@ -14,11 +14,18 @@ Application:<URL:8080>/<application-name>
 ### Folder structure of the Jboss wildfly
 
 domain
+
 modules
+
 welcome-content
+
 docs
+
 bin
+
 appclient
+
+standalone (configuration & deployments)
 
 one of the folder in folder structure standalone where we will be having the configuration and deployment folder and logs.
 
