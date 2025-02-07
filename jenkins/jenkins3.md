@@ -9,6 +9,15 @@
   * Click on security -> their you can change the password.
  
 **Note :**  Slaves, nodes , agents these three terminologies are same.
+
+### what if Jenkins administrator forget the password?(task)
+
+If a Jenkins administrator forgets the password, they can reset it using one of the following methods:
+
+--> Delete the Admin Password from config.xml
+
+--> Reset Admin Password via User XML File
+
 ## Jenkins Folders :
    In windows o.s we can see all jenkins information and configuration under path
        
@@ -87,6 +96,52 @@ Ways to trigger the jenkins jobs :
   When jenkins receives a github push hook , Github plugin checks to see whether the hook came from a github repository  which matches the Git repository defined in SCM/Git section of this job.
  
 **5.Poll SCM :** Configure jenkins to poll changes in SCM.
+
+### Why Use Git Webhooks in Jenkins?
+
+Git webhooks in Jenkins automate the process of triggering builds whenever there is a code change in a repository.
  
+### Purpose of Git Webhooks in Jenkins
+Automated Build Trigger
+
+When a developer pushes code to Git, Jenkins receives an event via a webhook and triggers a build automatically.
+
+### Reduced Load on Jenkins Server
+
+Polling Git repositories at intervals (e.g., every minute) can cause unnecessary load.
+Webhooks notify Jenkins instantly, reducing server resource usage.
+
+### Faster CI/CD Pipeline Execution
+
+Immediate triggering of builds speeds up feedback loops.
+
+Developers can quickly identify and fix issues.
+
+### Efficient Deployment Pipeline
+
+Webhooks ensure code changes are tested and deployed faster.
+
+They help integrate Jenkins with DevOps workflows, making deployments more seamless.
+
+### Better Integration with SCM Tools
+
+Jenkins can be integrated with GitHub, GitLab, Bitbucket, etc., using webhooks.
+Supports push events, PR events, tag creation, branch deletions, etc.
+
+### How to Configure Git Webhooks in Jenkins?
+Enable "GitHub hook trigger for GITScm polling" in the Jenkins job.
+Set up a webhook in GitHub/GitLab:
+
+Go to the repository → Settings → Webhooks → Add Webhook.
+Provide the Jenkins webhook URL:
+
+http://<JENKINS_URL>/github-webhook/
+
+Select "Just the push event" or other events as needed.
+
+Ensure Jenkins is accessible from GitHub (configure a public IP or set up a reverse proxy).
+
+Test the webhook by pushing code and checking if Jenkins triggers the build.
+
 **Note:** We can also trigger the job in manually
  
