@@ -98,19 +98,24 @@ It allows configuring the lowest level permisiion such as starting new build , c
 ## Jenkins projects ( Projects or jobs both are same )
 It is a combination of one or more tasks.
  
-Freestyle Project
+Free style project:
+Classic, general-purpose job type that checks out from up to one SCM, executes build steps serially, followed by post-build steps like archiving artifacts and sending email notifications.
 
-Maven Project
+pipeline:
+Orchestrates long-running activities that can span multiple build agents. Suitable for building pipelines(formerly known as workflows) and /or organizing complex activities that do not easily fit in free-style job type
 
-Pipeline
+multi-configuration project:
+Suitable for projects that need a large number of different configurations, such as testing on multiple environments, platform-specific builds, etc.
 
-Multi - Configuration Project
+Folder:
+Creates a container that stores nested items in it. Useful for grouping things together. Unlike view, which is just a filter, a folder creates a separate namespace, so you can have multiple things of the same name as long as they are in different folders
 
-Folder
+Multibranch pipeline:
+creates a set of pipeline projects according to detected branches in one SCM repository.
 
-Multi branch pipeline
+Organization Folder:
+Creates a set of multibranch project subfolders by scanning for repositories.
 
-Organization folder
  
 These are default things we will get after creating the project.
  
@@ -139,6 +144,8 @@ new item -> give job name /  item name -> select free style project -> ok
 Build steps (configuration) -> add build step dropdown --> select execute windows batch command --> type dir --> click on save
  
 then click on build now & check for console output.
+
+blue ocean(plugin)rethinks the Jenkins user experience designed from the ground up for Jenkins pipeline and compatible with freestyle jobs.
 
 
 
